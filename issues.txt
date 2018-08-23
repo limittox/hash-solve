@@ -1,0 +1,1 @@
+Does case functions work with numbers/special characters?
