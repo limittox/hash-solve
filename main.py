@@ -1,7 +1,7 @@
 from hashes.md5 import MD5
 from timeit import default_timer as timer
 
-with open('rockyou.txt',encoding='utf-8', errors='ignore') as f:
+with open('../rockyou.txt',encoding='utf-8', errors='ignore') as f:
     start=timer()
     wordlist = f.read().splitlines()
     end=timer()

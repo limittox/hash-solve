@@ -41,7 +41,10 @@ class Decrypter(object):
         start = timer()
         for i, s in enumerate(wordlist):
             if i % 100000 == 0:
-                print(f'{i} out of {len(wordlist)} words tested with {i*len(rules)} combinations')
+                end = timer()
+                print('{} out of {} words tested with {} combinations | Time for {}: {}'.format(i, len(wordlist), i*len(rules), i, (end-start)))
+                # print(f'{i} out of {len(wordlist)} words tested with {i*len(rules)} combinations | Time for {i}: {end - start}')
+                start = timer()
             # print(s)
             for r in rules:
                 checkStr = Rules(s).ruleManager(r)
