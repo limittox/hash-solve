@@ -1,6 +1,7 @@
 from hashes.md5 import MD5
 from timeit import default_timer as timer
 
+
 with open('../rockyou.txt',encoding='utf-8', errors='ignore') as f:
     start=timer()
     wordlist = f.read().splitlines()
@@ -10,6 +11,7 @@ print('File read time: {}'.format(end-start))
 
 with open('rulesBasic.rule',encoding='utf-8') as f:
     rules = f.read().splitlines()
+
 
 
 # print(wordlist)

@@ -1,16 +1,13 @@
 ***Improve performance***
 
 Current performance:
-100,000 words   |   5 rules = 3.85 secs
+1,000,000 words   |   5 rules = 38.5 secs (OLD)
+1,000,000 words	  |   5 rules = 10.2 secs
+
+Possible features to implement:
+> Multi-core
 
 Possible bottlenecks:
-> hashlib md5 function (only 0.45 secs)
-> Accessing list is slow (No - it is fast)
 
-> Rules Class - *PROBLEM*
 
 Possible solutions:
-> Place the md5 function in the md5 file, to make calls faster
-
-> The rule class is making it slower
-> Placing functions inside a dictionary makes execution faster
