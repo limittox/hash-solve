@@ -11,8 +11,7 @@ class MD5(object):
         self.rules = rules
 
     def encrypt(self, text):
-        h = md5()
-        h.update(text.encode('utf-8'))
+        h = md5(text.encode('utf-8'))
         return h.hexdigest()
     
     def decrypt(self, hash, passSize=None):

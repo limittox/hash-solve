@@ -56,3 +56,24 @@ class Decrypter(object):
                     # print(f'Execution Time (Decryption): {end-start}')
                     return s
         return "FAILED :("
+
+    # def decrypt_wordlist_rules(self, hash, wordlist, rules):
+    #     start = timer()
+    #     for i in range(len(wordlist)):
+    #         s = wordlist[i]
+    #         if i % 1e6 == 0:
+    #             end = timer()
+    #             print('{} out of {} words tested with {} combinations | Time for {}: {}'.format(i, len(wordlist), i*len(rules), i, (end-start)))
+    #             # print(f'{i} out of {len(wordlist)} words tested with {i*len(rules)} combinations | Time for {i}: {end - start}')
+    #             start = timer()
+    #         # print(s)
+    #         for r in rules:
+    #             checkStr = ruleManager(s, r)
+    #             # checkStr = Rules(s).ruleManager(r)
+    #             # print(checkStr)
+    #             checkStrEncrpt = self.hashType.encrypt(checkStr)
+    #             if hash == checkStrEncrpt:
+    #                 end = timer()
+    #                 # print(f'Execution Time (Decryption): {end-start}')
+    #                 return s
+    #     return "FAILED :("        

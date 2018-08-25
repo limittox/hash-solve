@@ -6,7 +6,7 @@ with open('../rockyou.txt',encoding='utf-8', errors='ignore') as f:
     wordlist = f.read().splitlines()
     end=timer()
 
-print(f'File read time: {end-start}')
+print('File read time: {}'.format(end-start))
 
 with open('rulesBasic.rule',encoding='utf-8') as f:
     rules = f.read().splitlines()

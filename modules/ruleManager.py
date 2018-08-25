@@ -1,15 +1,19 @@
 # from modules.rules import Rules
 
 def ruleManager(passString, rule):
-    ruleAndFunc = {
-            ':': nothing(passString), 
-            'l': lowercase(passString), 
-            'u': uppercase(passString), 
-            'c': capitalize(passString), 
-            'C': invertCapitalize(passString),
-            't': toggleCase(passString)
-        }
-    return ruleAndFunc.get(rule)
+    if rule == ':':
+        return nothing(passString)
+    if rule == 'l':
+        return lowercase(passString)
+    if rule == 'u':
+        return uppercase(passString)
+    if rule == 'c':
+        return capitalize(passString)
+    if rule == 'C':
+        return invertCapitalize(passString)
+    if rule == 't':
+        return toggleCase(passString)
+    
 
 def nothing(passString):
         return passString
