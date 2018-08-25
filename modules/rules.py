@@ -1,6 +1,7 @@
 class Rules(object):
     def __init__(self, passString):
         self.passString = passString
+        # self.rule = rule
     
     def ruleManager(self, rule):
         ruleAndFunc = {

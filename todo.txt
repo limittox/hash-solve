@@ -1,0 +1,10 @@
+***Improve performance***
+
+Current performance:
+100,000 words   |   5 rules = 3.85 secs
+
+Possible bottlenecks:
+> hashlib md5 function
+
+Possible solutions:
+> Place the md5 function in the md5 file, to make calls faster
