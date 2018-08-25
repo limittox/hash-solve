@@ -4,7 +4,7 @@
 
 1 million words with 6 rules = 6 million combinations | in ~10.2 seconds
 
-cython version
+**Cython version**
 
 1 million words with 6 rules = 6 million combinations | in ~7.3 seconds
 
