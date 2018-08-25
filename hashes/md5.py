@@ -10,9 +10,6 @@ class MD5(object):
         self.wordlist = wordlist
         self.rules = rules
 
-    def name(self):
-        return "MD5"
-
     def encrypt(self, text):
         h = md5()
         h.update(text.encode('utf-8'))
@@ -23,9 +20,9 @@ class MD5(object):
             passSize = 8
 
         if self.wordlist is None and self.rules is None:
-            return Decrypter(self, self.name, hash, passSize).decrypt_brute(hash)
+            return Decrypter(self, hash, passSize).decrypt_brute(hash)
         elif self.rules is None:
-            return Decrypter(self, self.name, hash, passSize).decrypt_wordlist(hash, self.wordlist)
+            return Decrypter(self, hash, passSize).decrypt_wordlist(hash, self.wordlist)
         else:
-            return Decrypter(self, self.name, hash, passSize).decrypt_wordlist_rules(hash, self.wordlist, self.rules)
+            return Decrypter(self, hash, passSize).decrypt_wordlist_rules(hash, self.wordlist, self.rules)
         

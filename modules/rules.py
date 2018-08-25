@@ -27,23 +27,37 @@ class Rules(object):
 
     # First letter capital, rest lower case
     def capitalize(self):
-        if self.passString.isalpha():
-            return self.passString[0].upper() + self.passString[1:].lower()
-        return "null"
+        return self.passString.capitalize()
+        # s = ''
+        # for i in self.passString:
+        #     if i.islower() and len(s) == 0:
+        #         s += i.upper()
+        #     else: 
+        #         s += i
+        # return s
 
     # First letter lowercase, rest capital
     def invertCapitalize(self):
-        if self.passString.isalpha():
-            return self.passString[0].lower() + self.passString[1:].upper()
-        return "null"
+        return self.passString.capitalize().swapcase()
+        # s = ''
+        # for val in self.passString:
+        #     if val.isalpha() and val.islower() and len(s) == 0:
+        #         s += val.upper()
+        #     elif val.isalpha() and val.isupper() and len(s) > 0:
+        #         s += val.lower()
+        #     else:
+        #         s += val
+        # return s
     
     # Invert case of letters
     def toggleCase(self):
-        s = [i for i in self.passString]
-        newS = []
-        for i in s:
-            if i.islower():
-                newS.append(i.upper())
-            elif i.isupper():
-                newS.append(i.lower())
-        return ''.join(newS)
+        return self.passString.swapcase()
+        # s = ''
+        # for i in self.passString:
+        #     if i.islower():
+        #         s += i.upper()
+        #     elif i.isupper():
+        #         s += i.lower()
+        #     else:
+        #         s += i
+        # return s

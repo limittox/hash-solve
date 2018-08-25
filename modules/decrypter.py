@@ -1,12 +1,11 @@
 from modules.iterString import iter_all_strings
-from modules.rules import Rules
+# from modules.rules import Rules
 from modules.ruleManager import ruleManager
 from timeit import default_timer as timer
 
 class Decrypter(object):
-    def __init__(self, hashType, name, hash, passSize):
+    def __init__(self, hashType, hash, passSize):
         self.hashType = hashType
-        self.name = name
         self.hash = hash
         self.passSize = passSize
     
@@ -41,14 +40,15 @@ class Decrypter(object):
     def decrypt_wordlist_rules(self, hash, wordlist, rules):
         start = timer()
         for i, s in enumerate(wordlist):
-            if i % 99999 == 0:
+            if i % 1e6 == 0:
                 end = timer()
                 print('{} out of {} words tested with {} combinations | Time for {}: {}'.format(i, len(wordlist), i*len(rules), i, (end-start)))
                 # print(f'{i} out of {len(wordlist)} words tested with {i*len(rules)} combinations | Time for {i}: {end - start}')
                 start = timer()
             # print(s)
             for r in rules:
-                checkStr = Rules(s).ruleManager(r)
+                checkStr = ruleManager(s, r)
+                # checkStr = Rules(s).ruleManager(r)
                 # print(checkStr)
                 checkStrEncrpt = self.hashType.encrypt(checkStr)
                 if hash == checkStrEncrpt:

@@ -1,7 +1,7 @@
 from hashes.md5 import MD5
 from timeit import default_timer as timer
 
-with open('../ry1e6.txt',encoding='utf-8', errors='ignore') as f:
+with open('../rockyou.txt',encoding='utf-8', errors='ignore') as f:
     start=timer()
     wordlist = f.read().splitlines()
     end=timer()
@@ -35,10 +35,10 @@ with open('rulesBasic.rule',encoding='utf-8') as f:
 # print(MD5(wordlist, rules).decrypt("de94a2b5bb89232d55e250bc0b87ea0b"))
 
 # 1mann19906 = bc0a63aef289456481501f41abe1d56c | 13,000,500th line in rockyou.txt
-# print(MD5(wordlist, rules).decrypt("bc0a63aef289456481501f41abe1d56c"))
+print(MD5(wordlist, rules).decrypt("bc0a63aef289456481501f41abe1d56c"))
 
 # Raprap = c986008b920825bffd0491b444cf50ee | Modification of 5000th line in rockyou.txt (First letter capital)
 # print(MD5(wordlist, rules).decrypt("c986008b920825bffd0491b444cf50ee"))
 
 # sagar = ada15bd1a5ddf0b790ae1dcfd05a1e70
-print(MD5(wordlist, rules).decrypt("41ed44e3038dbeee7d2ffaa7f51d8a4b"))
+# print(MD5(wordlist, rules).decrypt("41ed44e3038dbeee7d2ffaa7f51d8a4b"))
