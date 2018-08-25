@@ -1,1 +1,10 @@
 # hash-solve
+
+## Performance on MD5
+
+1 million words with 6 rules = 6 million combinations | in ~10.2 seconds
+
+cython version
+
+1 million words with 6 rules = 6 million combinations | in ~7.3 seconds
+
